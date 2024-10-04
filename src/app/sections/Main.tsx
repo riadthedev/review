@@ -1,5 +1,5 @@
 'use client'    
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import styles from './Navbar.module.css' 
 
@@ -10,11 +10,6 @@ const Main = () => {
     const [isSubmitted, setIsSubmitted] = useState(false)
     const [error, setError] = useState('')
 
-    useEffect(() => {
-        // Log environment variables to verify they're being loaded correctly
-        console.log("Table ID:", process.env.NEXT_PUBLIC_TABLE_ID)
-        console.log("Token:", process.env.NEXT_PUBLIC_XC_TOKEN)
-    }, [])
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -40,7 +35,7 @@ const Main = () => {
             }
             
             const responseData = await response.json()
-            console.log("Response:", responseData)
+            console.log(responseData)
             
             setIsSubmitted(true)
         } catch (error) {
