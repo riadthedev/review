@@ -1,0 +1,82 @@
+.animatedText {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.cursor {
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+.navbar {
+  position: relative;
+}
+.navbar::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background-size: 200% 200%;
+  background-image: linear-gradient(0deg, #FFA8A8 0%, #FABB5B 100%);
+  border-radius: inherit;
+  z-index: -1;
+}
+.input{
+  position: relative;
+}
+
+.input::after{
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background-size: 200% 200%;
+  background-image: linear-gradient(0deg, #FFA8A8 0%, #FABB5B 100%);
+  border-radius: inherit;
+  z-index: -1;
+}
+.button{
+    overflow: hidden;
+    position: relative;
+}
+.button::before{
+    content: '';
+    position: absolute;
+    width:100px;
+    height:100%;
+    background-image:linear-gradient(120deg,rgba(255,255,255,0) 30%,rgba(255,255,255,0.5),rgba(255,255,255,0) 70%);
+    filter: blur(3px);
+    top: 0;
+    left: -100%;
+    animation: shine 4s infinite linear;
+}
+@keyframes shine {
+    0%{
+        left: -100px;
+    }
+    20%{
+        left: 100%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
