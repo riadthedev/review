@@ -50,7 +50,10 @@ const Main = () => {
     return (
         <section className='px-10 py-10'>
             <header className='flex flex-col items-center justify-center gap-3'>
-                <Image src="/shopifypartner.svg" alt="logo" width={184} height={34}/>
+                <Image src="/experts.png" alt="logo" width={184} height={34}/>
+                <a href="https://www.producthunt.com/posts/myshopreview?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-myshopreview" target="_blank" className='mt-4 mb-4'>
+                    <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=496291&theme=light" alt="MyShopReview - Review&#0032;Your&#0032;Shopify&#0032;Store&#0032;So&#0032;You&#0032;Can&#0032;Sell&#0032;More&#0044;&#0032;Stress&#0032;Less&#0033; | Product Hunt" style={{ width: '250px', height: '54px' }} width="250" height="54" />
+                </a>
                 <h1 className='text-[32px] font-bold text-center leading-[40px] tracking-tight'>
                     GET A FREE LOOM REVIEW OF YOUR SHOPIFY STORE
                 </h1>
